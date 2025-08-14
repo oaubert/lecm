@@ -37,7 +37,7 @@ class Certificate(object):
         self.type = conf.get('type', 'RSA')
         self.size = conf.get('size', 4096)
         self.digest = conf.get('digest', 'sha256')
-        self.version = conf.get('version', 3)
+        self.version = conf.get('version', 0)
         self.environment = conf.get('environment', 'production')
         self.subjectAltName = self.normalize_san(conf.get('subjectAltName'))
         self.account_key_name = conf.get('account_key_name',
